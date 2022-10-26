@@ -8,7 +8,8 @@
 
 import asyncio
 from bleak import BleakScanner
-from bleak import BleakClient
+# from bleak import BleakClient
+from bleak import  BleakGATTCharacteristic
 # async def main():
 #     devices = await BleakScanner.discover()
 #     for d in devices:
@@ -38,7 +39,7 @@ from bleak import BleakClient
 import asyncio
 
 from bleak import BleakScanner
-
+# from bleak import BaseBleakScanner
 
 async def main():
     print("scanning for 5 seconds, please wait...")
@@ -51,8 +52,6 @@ async def main():
         print("-" * len(str(d)))
         print(a)
 
-    
-    
 
 if __name__ == "__main__":
     asyncio.run(main())
