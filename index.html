@@ -11,8 +11,15 @@
         - paths:
             - /try.py
     </py-env>
+    <py-env>
+        - asyncio
+        - bleak
+    </py-env>
 </head>
 <body>
-    <py-script> print('Now you can!') </py-script>|
+<py-script>
+import try
+try.main()
+</py-script>
 </body>
 </html>
