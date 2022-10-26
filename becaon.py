@@ -16,8 +16,8 @@ ibeacon_format = Struct(
     "power" / Int8sl,
 )
 
-async def macs():
-    devices = await BleakScanner.discover()
+def macs():
+    devices = BleakScanner.discover()
     for x in devices:
         print(x)
 
@@ -30,7 +30,8 @@ def device_found(
         ibeacon = ibeacon_format.parse(apple_data)
         uuid = UUID(bytes=bytes(ibeacon.uuid))
         # devices_1 =  BleakScanner.discover()
-        print(f"MAC Adress : {macs()}")
+        # print(f"MAC Adress : {macs()}")
+        # macs()
         print(f"UUID     : {uuid}")
         print(f"Major    : {ibeacon.major}")
         print(f"Minor    : {ibeacon.minor}")
@@ -53,7 +54,7 @@ async def main():
 
     while True:
         await scanner.start()
-        await asyncio.sleep(10.0)
+        await asyncio.sleep(1.0)
         await scanner.stop()
         
 asyncio.run(main())
