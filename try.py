@@ -36,6 +36,27 @@ from bleak import  BleakGATTCharacteristic
 #         print(i) 
 # asyncio.run(main())
 
+# import asyncio
+
+# from bleak import BleakScanner
+# # from bleak import BaseBleakScanner
+
+# async def main():
+#     print("scanning for 5 seconds, please wait...")
+
+#     devices = await BleakScanner.discover(return_adv=True)
+
+#     for d, a in devices.values():
+#         print()
+#         print(d)                    # beacon names are POI
+#         print("-" * len(str(d)))
+#         print(a)
+
+
+# if __name__ == "__main__":
+#     asyncio.run(main())
+
+# https://bleak.readthedocs.io/en/latest/api/scanner.html#bleak.BleakScanner.discovered_devices_and_advertisement_data
 import asyncio
 
 from bleak import BleakScanner
@@ -55,5 +76,3 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
-
-# https://bleak.readthedocs.io/en/latest/api/scanner.html#bleak.BleakScanner.discovered_devices_and_advertisement_data
