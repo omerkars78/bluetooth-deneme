@@ -16,12 +16,12 @@ ibeacon_format = Struct(
     "power" / Int8sl,
 )
 
-async def macs():
-    print("scanning for 5 seconds, please wait...")
+# async def macs():
+#     print("scanning for 5 seconds, please wait...")
 
-    devices = await BleakScanner.discover(return_adv=True)
+#     devices = await BleakScanner.discover(return_adv=True)
 
-    return devices.keys()
+#     return devices.keys()
 
 def device_found(
     device: BLEDevice, advertisement_data: AdvertisementData
@@ -29,12 +29,12 @@ def device_found(
     """Decode iBeacon."""
     try:
         name = advertisement_data.local_name
-        # macadress = BleakScanner.discover(return_adv=True)
+        macadress = advertisement_data.platform_data
         apple_data = advertisement_data.manufacturer_data[0x004C]
         ibeacon = ibeacon_format.parse(apple_data)
         uuid = UUID(bytes=bytes(ibeacon.uuid))
 
-       
+        print(f"Mac Adress : {macadress}")
         print(f"Local Name : {name}")
         print(f"UUID     : {uuid}")
         print(f"Major    : {ibeacon.major}")
@@ -55,7 +55,7 @@ async def main():
     """Scan for devices."""
     scanner = BleakScanner()
     scanner.register_detection_callback(device_found)
-    macs()
+
 
     while True:
         await scanner.start()
@@ -63,4 +63,3 @@ async def main():
         await scanner.stop()
         
 asyncio.run(main())
-asyncio.run(macs())
