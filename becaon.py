@@ -28,13 +28,13 @@ def device_found(
 ):
     """Decode iBeacon."""
     try:
+        macadress = BleakScanner.discover(return_adv=True)
         name = advertisement_data.local_name
-        macadress = advertisement_data.platform_data
         apple_data = advertisement_data.manufacturer_data[0x004C]
         ibeacon = ibeacon_format.parse(apple_data)
         uuid = UUID(bytes=bytes(ibeacon.uuid))
 
-        print(f"Mac Adress : {macadress}")
+        print(f"Mac Adress : {macadress.__await__}")
         print(f"Local Name : {name}")
         print(f"UUID     : {uuid}")
         print(f"Major    : {ibeacon.major}")
