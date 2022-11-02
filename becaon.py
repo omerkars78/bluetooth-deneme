@@ -16,13 +16,6 @@ ibeacon_format = Struct(
     "power" / Int8sl,
 )
 
-# async def macs():
-#     print("scanning for 5 seconds, please wait...")
-
-#     devices = await BleakScanner.discover(return_adv=True)
-
-#     return devices.keys()
-
 def device_found(
     device: BLEDevice, advertisement_data: AdvertisementData
 ):
@@ -37,16 +30,16 @@ def device_found(
         major = ibeacon.major 
         power = ibeacon.power
         rssi = device.rssi
-        # print(f"Mac Adress : {macadress}")
-        # print(f"Local Name : {name}")
-        # print(f"UUID     : {uuid}")
-        # print(f"Major    : {major}")
-        # print(f"Minor    : {minor}")
-        # print(f"TX power : {power} dBm")
-        # print(f"RSSI     : {rssi} dBm")
+        print(f"Mac Adress : {macadress}")
+        print(f"Local Name : {name}")
+        print(f"UUID     : {uuid}")
+        print(f"Major    : {major}")
+        print(f"Minor    : {minor}")
+        print(f"TX power : {power} dBm")
+        print(f"RSSI     : {rssi} dBm")
         print(47 * "-")
-        list_1 = [macadress,name,uuid,major,minor,power,rssi]
-        print(list_1)
+        # list_1 = [macadress,name,uuid,major,minor,power,rssi]
+        # print(list_1)
     except KeyError:
         # Apple company ID (0x004c) not found
         pass
@@ -61,10 +54,10 @@ async def main():
     scanner = BleakScanner()
     scanner.register_detection_callback(device_found)
 
-
-    while True:
+    
+    while (True):
         await scanner.start()
-        await asyncio.sleep(1.0)
+        await asyncio.sleep(15.0)
         await scanner.stop()
         
 asyncio.run(main())
