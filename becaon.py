@@ -28,20 +28,25 @@ def device_found(
 ):
     """Decode iBeacon."""
     try:
-        macadress = BleakScanner.discover(return_adv=True)
+        macadress = device.address
         name = advertisement_data.local_name
         apple_data = advertisement_data.manufacturer_data[0x004C]
         ibeacon = ibeacon_format.parse(apple_data)
         uuid = UUID(bytes=bytes(ibeacon.uuid))
-
-        print(f"Mac Adress : {macadress.__await__}")
-        print(f"Local Name : {name}")
-        print(f"UUID     : {uuid}")
-        print(f"Major    : {ibeacon.major}")
-        print(f"Minor    : {ibeacon.minor}")
-        print(f"TX power : {ibeacon.power} dBm")
-        print(f"RSSI     : {device.rssi} dBm")
+        minor = ibeacon.minor 
+        major = ibeacon.major 
+        power = ibeacon.power
+        rssi = device.rssi
+        # print(f"Mac Adress : {macadress}")
+        # print(f"Local Name : {name}")
+        # print(f"UUID     : {uuid}")
+        # print(f"Major    : {major}")
+        # print(f"Minor    : {minor}")
+        # print(f"TX power : {power} dBm")
+        # print(f"RSSI     : {rssi} dBm")
         print(47 * "-")
+        list_1 = [macadress,name,uuid,major,minor,power,rssi]
+        print(list_1)
     except KeyError:
         # Apple company ID (0x004c) not found
         pass
