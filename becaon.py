@@ -57,7 +57,7 @@ async def main():
     
     while (True):
         await scanner.start()
-        await asyncio.sleep(15.0)
+        await asyncio.sleep(0.5)
         await scanner.stop()
         
 asyncio.run(main())
