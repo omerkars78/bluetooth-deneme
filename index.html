@@ -5,19 +5,22 @@
     </head>
 
   <body>
-    <h1>Let's plot random numbers</h1>
-    <div id="plot"></div>
-    <py-config type="toml">
-        packages = ["numpy", "matplotlib"]
-        paths = ["./data.py"]
-    </py-config>
-    <py-script output="plot">
-      import matplotlib.pyplot as plt
-      from data import make_x_and_y
-      x, y = make_x_and_y(n=1000)
-      fig, ax = plt.subplots()
-      ax.scatter(x, y)
-      fig
-    </py-script>
+    <py-script>
+      # Run this using "asyncio"
+      from bleak import BleakScanner
+      import asyncio
+      async def main():
+          await micropip.install(["bleak","asyncio"])  
+      
+      
+      devices = await BleakScanner.discover(return_adv=True)
+      # for d, a in devices.values():
+      #     print()
+      #     print(d)                    # beacon names are POI
+      #     print("-" * len(str(d)))
+      #     print(a)
+      print(devices.keys())
+      await loop.run_until_complete(main())
+      </py-script>
   </body>
 </html>
