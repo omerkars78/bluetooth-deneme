@@ -1,20 +1,15 @@
-import asyncio
+# from flask import Flask
+# from gevent.pywsgi import WSGIServer
 
-from bleak import BleakScanner
+# app = Flask(__name__)
 
+# @app.route('/api', methods=['GET'])
+# def index():
+#     return "Hello, World!"
 
-async def main():
-    print("scanning for 5 seconds, please wait...")
-
-    devices = await BleakScanner.discover(return_adv=True)
-    
-    for d, a in devices.values():
-        print()
-        print(d)                    # beacon names are POI
-        print("-" * len(str(d)))
-        print(a)
-    
-
-
-if __name__ == "__main__":
-    asyncio.run(main())
+# if __name__ == '__main__':
+#     # Debug/Development
+#     # app.run(debug=True, host="0.0.0.0", port="5000")
+#     # Production
+#     http_server = WSGIServer(('', 5000), app)
+#     http_server.serve_forever()

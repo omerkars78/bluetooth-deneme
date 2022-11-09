@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -21,4 +21,45 @@ plt.plot(time, np.sin(time))
 plt
   </py-script>
 </body>
-</html>
+</html> -->
+
+{% extends "layout.html" %}
+ 
+ {% block title %}
+        <title>Users</title>
+ {% endblock %}
+ 
+ {% block body %}
+        <body>
+        {% include "navbar.html" %}
+        <div class="jumbotron">
+            <h2>Kullanıcılar</h2>
+            {{hata}}
+ 
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>İsim</th>
+                        <th>Soyisim</th>
+                        <th>Kullanıcı Adı</th>
+                        <th>Parola</th>
+                    </tr>
+                </thead>
+                <tbody>
+ 
+ 
+                    <tr class="success">
+                        <td>{{name}}</td>
+                        <td>{{surname}}</td>
+                        <td>{{username}}</td>
+                        <td>{{password}}</td>
+                    </tr>
+ 
+ 
+                </tbody>
+            </table>
+ 
+        </div>
+ 
+        </body>
+ {% endblock %}
