@@ -15,7 +15,12 @@ ibeacon_format = Struct(
     "minor" / Int16ub,
     "power" / Int8sl,
 )
-
+class UUIDEncoder(json.JSONEncoder):
+    def default(self, uuid):
+        if isinstance(uuid, UUID):
+            # if the obj is uuid, we simply return the value of uuid
+            return uuid.hex
+        return json.JSONEncoder.default(self, uuid)
 def device_found(
     device: BLEDevice, advertisement_data: AdvertisementData
 ):
@@ -30,27 +35,35 @@ def device_found(
         major = ibeacon.major 
         power = ibeacon.power
         rssi = device.rssi
-        beacons = { 1:
-            {"Mac Adress" : macadress,
+        rssi = int(rssi)
+
+        beacons = { 
+            "Mac Adress" : macadress,
             "Local Name" : name ,
-            #"UUID":uuid,
+            "UUID":uuid,
             "Major":major,
             "Minor":minor,
             "TX Power":power,
-            "RSSI":rssi}
+            "RSSI":rssi
         } 
-        print(f"Mac Adress : {macadress}")
-        print(f"Local Name : {name}")
-        print(f"UUID     : {uuid}")
-        print(f"Major    : {major}")
-        print(f"Minor    : {minor}")
-        print(f"TX power : {power} dBm")
-        print(f"RSSI     : {rssi} dBm")
-        print(47 * "-") 
-        with open("data.json","x") as file:
-            json.dump(beacons,file)
+        
+        if(beacons["Local Name"]== "POI" and beacons["RSSI"] <= -40 and beacons["RSSI"] >= -80):
+            with open("data.json","a") as file:
+                json.dump(beacons,file,sort_keys=True,indent=4,skipkeys=True,cls=UUIDEncoder,separators=(",",":"))
+        else:
+            pass 
+        # print(f"Mac Adress : {macadress}")
+        # print(f"Local Name : {name}")
+        # print(f"UUID     : {uuid}")
+        # print(f"Major    : {major}")
+        # print(f"Minor    : {minor}")
+        # print(f"TX power : {power} dBm")
+        # print(f"RSSI     : {rssi} dBm")
+        # print(47 * "-") 
+        
         # list_1 = [macadress,name,uuid,major,minor,power,rssi]
         # print(list_1)
+        
     except KeyError:
         # Apple company ID (0x004c) not found
         pass
