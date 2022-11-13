@@ -8,4 +8,5 @@ data = {
     "TX Power":-67,
     "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3"
 } 
-print(data.keys())
+r = json.dumps(data)
+print(type(r))
