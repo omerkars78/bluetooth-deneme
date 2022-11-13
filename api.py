@@ -113,16 +113,33 @@ app.config["DEBUG"] = False
 
 @app.route('/', methods=['GET'])
 def home():
-    return '''<h1>dev.to/koraybarkin Flask ile Web API geliştirme</h1><p>Tebrikler ilk Web API'ınızı başarıyla geliştirdiniz!</p>'''
+    return '''<h1>Merhaba Python projesi</h1>'''
 
 
 # A route to return all of the available entries in our catalog.
 @app.route('/api/v1/resources/books/all', methods=['GET'])
 def api_all():
     # Opening JSON file
-        f = open('data.json')
-        
-        # returns JSON object as 
-        # a dictionary
-    return 
+    with open("data.json") as file:
+        data = file.read()
+    return jsonify(data)
 app.run()
+
+# from flask import Flask, request, jsonify
+# from flask_restful import Api, Resource
+
+# app = Flask(__name__)
+
+# api = Api(app)
+
+# class returnjson(Resource):
+# 	def get(self):
+#         with open("data.json") as file:
+#             data = file.read()
+#         return jsonify(data)
+
+# api.add_resource(returnjson,'/returnjson')
+
+
+# if __name__=='__main__':
+# 	app.run(debug=True)
