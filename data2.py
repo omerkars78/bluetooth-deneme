@@ -1,13 +1,14 @@
 import asyncio
 from uuid import UUID
-
+import json 
 from construct import Array, Byte, Const, Int8sl, Int16ub, Struct
 from construct.core import ConstError
 
 from bleak import BleakScanner
 from bleak.backends.device import BLEDevice
 from bleak.backends.scanner import AdvertisementData
-import json
+
+
 ibeacon_format = Struct(
     "type_length" / Const(b"\x02\x15"),
     "uuid" / Array(16, Byte),
