@@ -1,9 +1,7 @@
-import Button from "./components/Button";
-import Circle from "./components/Circle";
 
 function App() {
   return (
-    <div className="main flex flex-col">
+    <div className="flex flex-col bg-[#307BFE]">
       <div></div>{/* Title */}
       <div></div>{/* Circle */}
       <div></div>{/* Select Option */}
