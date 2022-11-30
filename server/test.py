@@ -1,101 +1,64 @@
-import asyncio
-from uuid import UUID
-import json 
-from construct import Array, Byte, Const, Int8sl, Int16ub, Struct
-from construct.core import ConstError
+from flask import Flask
+from flask_restful import Resource, Api
+from apispec import APISpec
+from marshmallow import Schema, fields
+from apispec.ext.marshmallow import MarshmallowPlugin
+from flask_apispec.extension import FlaskApiSpec
+from flask_apispec.views import MethodResource
+from flask_apispec import marshal_with, doc, use_kwargs
+from flask import request, jsonify
+import json
 
-from bleak import BleakScanner
-from bleak.backends.device import BLEDevice
-from bleak.backends.scanner import AdvertisementData
+app = Flask(__name__)  # Flask app instance initiated
+api = Api(app)  # Flask restful wraps Flask app around it.
+app.config.update({
+    'APISPEC_SPEC': APISpec(
+        title='Bluetooth Project',
+        version='v1',
+        plugins=[MarshmallowPlugin()],
+        openapi_version='2.0.0'
+    ),
+    'APISPEC_SWAGGER_URL': '/swagger/',  # URI to access API Doc JSON
+    'APISPEC_SWAGGER_UI_URL': '/swagger-ui/'  # URI to access UI of API Doc
+})
+docs = FlaskApiSpec(app)
 
 
-ibeacon_format = Struct(
-    "type_length" / Const(b"\x02\x15"),
-    "uuid" / Array(16, Byte),
-    "major" / Int16ub,
-    "minor" / Int16ub,
-    "power" / Int8sl,
-)
-class UUIDEncoder(json.JSONEncoder):
-    def default(self, uuid):
-        if isinstance(uuid, UUID):
-            # if the obj is uuid, we simply return the value of uuid
-            return uuid.hex
-        return json.JSONEncoder.default(self, uuid)
-def device_found(
-    device: BLEDevice, advertisement_data: AdvertisementData
-):
-    """Decode iBeacon."""
-    try:
-        macadress = device.address
-        name = advertisement_data.local_name
-        apple_data = advertisement_data.manufacturer_data[0x004C]
-        ibeacon = ibeacon_format.parse(apple_data)
-        uuid = UUID(bytes=bytes(ibeacon.uuid))
-        minor = ibeacon.minor 
-        major = ibeacon.major 
-        power = ibeacon.power
-        rssi = device.rssi
-        rssi = int(rssi)
-        device_id = 0 
-        
-        device_list = [
-            {
-            "Mac Adress" : macadress,
-            "Local Name" : name ,
-            "UUID":uuid,
-            "Major":major,
-            "Minor":minor,
-            "TX Power":power,
-            "RSSI":rssi
-            }
-        ] 
+class AwesomeResponseSchema(Schema):
+    message = fields.Str(default='Success')
 
-        list_device = {
 
-            "Mac Adress" : macadress,
-            "Local Name" : name ,
-            "UUID":uuid,
-            "Major":major,
-            "Minor":minor,
-            "TX Power":power,
-            "RSSI":rssi
+class AwesomeRequestSchema(Schema):
+    api_type = fields.String(
+        required=True, description="API type of awesome API")
 
-        }
-       
+
+#  Restful way of creating APIs through Flask Restful
+class AwesomeAPI(MethodResource, Resource):
+    @doc(description='Bluetooth Verileri İşlemleri.', tags=['Bluetooth'])
+    @marshal_with(AwesomeResponseSchema)  # marshalling
+    def get(self):
+        '''
+        Get method represents a GET API method
+        '''
         with open("data.json") as file:
-            devices = json.load(file)
-        
-        devices.append(list_device)   
-        with open("data.json","w") as file:
-            json.dump(devices,file,ensure_ascii=False,indent=4,skipkeys=True,cls=UUIDEncoder,separators=(",",":"))
-            
-        
+            data = file.read()
+        return jsonify(data)
 
-        
-       
-        
-    except KeyError:
-        # Apple company ID (0x004c) not found
-        pass
-    except ConstError:
-        # No iBeacon (type 0x02 and length 0x15)
-        pass
+    # @doc(description='My First GET Awesome API.', tags=['Awesome'])
+    # @use_kwargs(AwesomeRequestSchema, location=('json'))
+    # @marshal_with(AwesomeResponseSchema)  # marshalling
+    # def post(self, **kwargs):
+    #     '''
+    #     Get method represents a GET API method
+    #     '''
+    #     with open("data.json") as file:
+    #         data = file.read()
+    #     return jsonify(data)
 
 
+api.add_resource(AwesomeAPI, '/get_bluetooth')
+docs.register(AwesomeAPI)
 
-async def main():
-    """Scan for devices."""
-    scanner = BleakScanner()
-    scanner.register_detection_callback(device_found)
-    
-    
-
-    
-    while (True):
-        
-        await scanner.start()
-        await asyncio.sleep(0.5)
-        await scanner.stop()
-        
-asyncio.run(main())
+if __name__ == '__main__':
+    app.run(debug=True)
