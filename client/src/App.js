@@ -19,7 +19,7 @@ function App() {
       {/* <Header/>
       <Circle/>
       <SelectMenu/> */}
-      {data}
+      <p>{data}</p>
     </div>
   );
 }

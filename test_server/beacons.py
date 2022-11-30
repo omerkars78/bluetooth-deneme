@@ -8,7 +8,7 @@ from bleak import BleakScanner
 from bleak.backends.device import BLEDevice
 from bleak.backends.scanner import AdvertisementData
 
-
+import json
 ibeacon_format = Struct(
     "type_length" / Const(b"\x02\x15"),
     "uuid" / Array(16, Byte),

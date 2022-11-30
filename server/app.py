@@ -8,9 +8,11 @@ from flask_apispec.views import MethodResource
 from flask_apispec import marshal_with, doc, use_kwargs
 from flask import request, jsonify
 import json
-
+from flask_cors import CORS
 app = Flask(__name__)  # Flask app instance initiated
 api = Api(app)  # Flask restful wraps Flask app around it.
+cors = CORS(app, resources={r"/get_bluetooth": {"origins": "*"}})
+app.config['CORS_HEADERS'] = 'Content-Type'
 app.config.update({
     'APISPEC_SPEC': APISpec(
         title='Bluetooth Project',
@@ -37,11 +39,12 @@ class AwesomeRequestSchema(Schema):
 class AwesomeAPI(MethodResource, Resource):
     @doc(description='Bluetooth Verileri İşlemleri.', tags=['Bluetooth'])
     @marshal_with(AwesomeResponseSchema)  # marshalling
+    
     def get(self):
         '''
         Get method represents a GET API method
         '''
-        with open("data.json") as file:
+        with open("server\data.json") as file:
             data = file.read()
         return jsonify(data)
 
