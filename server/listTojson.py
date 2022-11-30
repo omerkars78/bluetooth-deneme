@@ -62,7 +62,9 @@ def device_found(
             "RSSI":rssi
 
         }
-       
+        # with open("data.json","w") as file:
+        #     json.dump(device_list,file,ensure_ascii=False,indent=4,skipkeys=True,cls=UUIDEncoder,separators=(",",":"))
+        
         with open("data.json") as file:
             devices = json.load(file)
         

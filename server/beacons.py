@@ -37,43 +37,33 @@ def device_found(
         power = ibeacon.power
         rssi = device.rssi
         rssi = int(rssi)
-        device_id = 0 
-        
-        device_list = [
-            {
-            "Mac Adress" : macadress,
-            "Local Name" : name ,
-            "UUID":uuid,
-            "Major":major,
-            "Minor":minor,
-            "TX Power":power,
-            "RSSI":rssi
-            }
-        ] 
 
-        list_device = {
-
-            "Mac Adress" : macadress,
-            "Local Name" : name ,
-            "UUID":uuid,
-            "Major":major,
-            "Minor":minor,
-            "TX Power":power,
-            "RSSI":rssi
-
-        }
-       
-        with open("data.json") as file:
-            devices = json.load(file)
+        # beacons = { 
+        #     "Mac Adress" : macadress,
+        #     "Local Name" : name ,
+        #     "UUID":uuid,
+        #     "Major":major,
+        #     "Minor":minor,
+        #     "TX Power":power,
+        #     "RSSI":rssi
+        # } 
         
-        devices.append(list_device)   
-        with open("data.json","w") as file:
-            json.dump(devices,file,ensure_ascii=False,indent=4,skipkeys=True,cls=UUIDEncoder,separators=(",",":"))
-            
+        # if(beacons["Local Name"]== "POI" and beacons["RSSI"] <= -40 and beacons["RSSI"] >= -80):
+        #     with open("data.json","a") as file:
+        #         json.dump(beacons,file,sort_keys=True,indent=4,skipkeys=True,cls=UUIDEncoder,separators=(",",":"))
+        # else:
+        #     pass 
+        print(f"Mac Adress : {macadress}")
+        print(f"Local Name : {name}")
+        print(f"UUID     : {uuid}")
+        print(f"Major    : {major}")
+        print(f"Minor    : {minor}")
+        print(f"TX power : {power} dBm")
+        print(f"RSSI     : {rssi} dBm")
+        print(47 * "-") 
         
-
-        
-       
+        # list_1 = [macadress,name,uuid,major,minor,power,rssi]
+        # print(list_1)
         
     except KeyError:
         # Apple company ID (0x004c) not found
@@ -88,12 +78,9 @@ async def main():
     """Scan for devices."""
     scanner = BleakScanner()
     scanner.register_detection_callback(device_found)
-    
-    
 
     
     while (True):
-        
         await scanner.start()
         await asyncio.sleep(0.5)
         await scanner.stop()

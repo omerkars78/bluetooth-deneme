@@ -1,1 +1,1055 @@
-{}
+[
+    {
+        "Mac Adress":"FD:0F:EE:88:49:45",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":51,
+        "TX Power":-67,
+        "RSSI":-90
+    },
+    {
+        "Mac Adress":"ED:FC:62:54:38:3E",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":54,
+        "TX Power":-67,
+        "RSSI":-92
+    },
+    {
+        "Mac Adress":"C6:C5:20:CA:73:D9",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":13,
+        "TX Power":-67,
+        "RSSI":-85
+    },
+    {
+        "Mac Adress":"EC:EB:CF:21:92:9B",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":48,
+        "TX Power":-67,
+        "RSSI":-90
+    },
+    {
+        "Mac Adress":"E6:56:F5:E2:B6:61",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":33,
+        "TX Power":-67,
+        "RSSI":-85
+    },
+    {
+        "Mac Adress":"F9:65:23:E7:26:11",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":70,
+        "TX Power":-67,
+        "RSSI":-83
+    },
+    {
+        "Mac Adress":"ED:49:B2:FA:52:C5",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":65,
+        "TX Power":-67,
+        "RSSI":-93
+    },
+    {
+        "Mac Adress":"EA:72:C0:CE:3E:83",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":18,
+        "TX Power":-67,
+        "RSSI":-90
+    },
+    {
+        "Mac Adress":"C4:3D:E5:9A:40:21",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":1,
+        "TX Power":-67,
+        "RSSI":-94
+    },
+    {
+        "Mac Adress":"DD:B4:63:F2:BB:1F",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":62,
+        "TX Power":-67,
+        "RSSI":-85
+    },
+    {
+        "Mac Adress":"C0:85:3B:B2:9C:C3",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":46,
+        "TX Power":-67,
+        "RSSI":-85
+    },
+    {
+        "Mac Adress":"FF:F5:38:2B:CF:AA",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":53,
+        "TX Power":-67,
+        "RSSI":-92
+    },
+    {
+        "Mac Adress":"C1:BE:3B:66:D8:4C",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":45,
+        "TX Power":-67,
+        "RSSI":-91
+    },
+    {
+        "Mac Adress":"FA:F4:F6:F4:E8:B3",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":6,
+        "TX Power":-67,
+        "RSSI":-98
+    },
+    {
+        "Mac Adress":"C3:3D:09:DE:0F:4F",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":12,
+        "TX Power":-67,
+        "RSSI":-92
+    },
+    {
+        "Mac Adress":"C0:85:3B:B2:9C:C3",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":46,
+        "TX Power":-67,
+        "RSSI":-86
+    },
+    {
+        "Mac Adress":"FD:0F:EE:88:49:45",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":51,
+        "TX Power":-67,
+        "RSSI":-91
+    },
+    {
+        "Mac Adress":"CB:8B:8D:D5:BA:F3",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":58,
+        "TX Power":-67,
+        "RSSI":-87
+    },
+    {
+        "Mac Adress":"D7:15:40:F5:6F:7F",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":21,
+        "TX Power":-67,
+        "RSSI":-88
+    },
+    {
+        "Mac Adress":"D1:34:0F:20:B4:00",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":31,
+        "TX Power":-67,
+        "RSSI":-86
+    },
+    {
+        "Mac Adress":"DF:F5:20:38:07:8D",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":30,
+        "TX Power":-67,
+        "RSSI":-89
+    },
+    {
+        "Mac Adress":"DF:26:23:6B:A0:44",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":11,
+        "TX Power":-67,
+        "RSSI":-86
+    },
+    {
+        "Mac Adress":"C3:3D:09:DE:0F:4F",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":12,
+        "TX Power":-67,
+        "RSSI":-85
+    },
+    {
+        "Mac Adress":"C1:BE:3B:66:D8:4C",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":45,
+        "TX Power":-67,
+        "RSSI":-92
+    },
+    {
+        "Mac Adress":"F1:C2:42:0E:8A:01",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":36,
+        "TX Power":-67,
+        "RSSI":-91
+    },
+    {
+        "Mac Adress":"EC:EB:CF:21:92:9B",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":48,
+        "TX Power":-67,
+        "RSSI":-84
+    },
+    {
+        "Mac Adress":"DF:F5:20:38:07:8D",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":30,
+        "TX Power":-67,
+        "RSSI":-91
+    },
+    {
+        "Mac Adress":"D9:7F:B9:C3:4E:FA",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":27,
+        "TX Power":-67,
+        "RSSI":-91
+    },
+    {
+        "Mac Adress":"EA:72:C0:CE:3E:83",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":18,
+        "TX Power":-67,
+        "RSSI":-83
+    },
+    {
+        "Mac Adress":"C2:4F:B0:B9:05:37",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":44,
+        "TX Power":-67,
+        "RSSI":-91
+    },
+    {
+        "Mac Adress":"F7:5F:FC:41:89:5B",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":26,
+        "TX Power":-67,
+        "RSSI":-94
+    },
+    {
+        "Mac Adress":"C3:3D:09:DE:0F:4F",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":12,
+        "TX Power":-67,
+        "RSSI":-88
+    },
+    {
+        "Mac Adress":"F1:C2:42:0E:8A:01",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":36,
+        "TX Power":-67,
+        "RSSI":-85
+    },
+    {
+        "Mac Adress":"D4:C8:97:6A:04:8A",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":29,
+        "TX Power":-67,
+        "RSSI":-90
+    },
+    {
+        "Mac Adress":"CE:0C:05:56:76:19",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":43,
+        "TX Power":-67,
+        "RSSI":-94
+    },
+    {
+        "Mac Adress":"ED:49:B2:FA:52:C5",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":65,
+        "TX Power":-67,
+        "RSSI":-87
+    },
+    {
+        "Mac Adress":"F7:5F:FC:41:89:5B",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":26,
+        "TX Power":-67,
+        "RSSI":-95
+    },
+    {
+        "Mac Adress":"D7:15:40:F5:6F:7F",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":21,
+        "TX Power":-67,
+        "RSSI":-89
+    },
+    {
+        "Mac Adress":"D3:0F:D7:41:B1:5F",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":22,
+        "TX Power":-67,
+        "RSSI":-96
+    },
+    {
+        "Mac Adress":"C0:99:27:16:CA:4B",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":66,
+        "TX Power":-67,
+        "RSSI":-94
+    },
+    {
+        "Mac Adress":"D7:9B:28:DD:C1:E5",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":4,
+        "TX Power":-67,
+        "RSSI":-89
+    },
+    {
+        "Mac Adress":"C1:BE:3B:66:D8:4C",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":45,
+        "TX Power":-67,
+        "RSSI":-92
+    },
+    {
+        "Mac Adress":"F1:C2:42:0E:8A:01",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":36,
+        "TX Power":-67,
+        "RSSI":-93
+    },
+    {
+        "Mac Adress":"F4:B9:69:37:F3:28",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":64,
+        "TX Power":-67,
+        "RSSI":-94
+    },
+    {
+        "Mac Adress":"F1:41:28:93:FB:66",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":23,
+        "TX Power":-67,
+        "RSSI":-88
+    },
+    {
+        "Mac Adress":"EA:D3:96:18:7B:22",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":38,
+        "TX Power":-67,
+        "RSSI":-88
+    },
+    {
+        "Mac Adress":"EC:EB:CF:21:92:9B",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":48,
+        "TX Power":-67,
+        "RSSI":-85
+    },
+    {
+        "Mac Adress":"C0:99:27:16:CA:4B",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":66,
+        "TX Power":-67,
+        "RSSI":-88
+    },
+    {
+        "Mac Adress":"F2:3C:95:6E:DD:65",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":57,
+        "TX Power":-67,
+        "RSSI":-92
+    },
+    {
+        "Mac Adress":"C6:C5:20:CA:73:D9",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":13,
+        "TX Power":-67,
+        "RSSI":-83
+    },
+    {
+        "Mac Adress":"D1:34:0F:20:B4:00",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":31,
+        "TX Power":-67,
+        "RSSI":-85
+    },
+    {
+        "Mac Adress":"C1:0B:64:94:D7:DD",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":50,
+        "TX Power":-67,
+        "RSSI":-88
+    },
+    {
+        "Mac Adress":"E9:50:19:B0:14:DC",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":28,
+        "TX Power":-67,
+        "RSSI":-80
+    },
+    {
+        "Mac Adress":"DF:AD:D7:2F:6E:D3",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":25,
+        "TX Power":-67,
+        "RSSI":-93
+    },
+    {
+        "Mac Adress":"C3:54:1F:CA:5B:39",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":39,
+        "TX Power":-67,
+        "RSSI":-89
+    },
+    {
+        "Mac Adress":"D3:0F:D7:41:B1:5F",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":22,
+        "TX Power":-67,
+        "RSSI":-85
+    },
+    {
+        "Mac Adress":"F4:B9:69:37:F3:28",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":64,
+        "TX Power":-67,
+        "RSSI":-88
+    },
+    {
+        "Mac Adress":"C2:4F:B0:B9:05:37",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":44,
+        "TX Power":-67,
+        "RSSI":-90
+    },
+    {
+        "Mac Adress":"E5:98:C1:F8:7C:52",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":42,
+        "TX Power":-67,
+        "RSSI":-88
+    },
+    {
+        "Mac Adress":"FA:F4:F6:F4:E8:B3",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":6,
+        "TX Power":-67,
+        "RSSI":-93
+    },
+    {
+        "Mac Adress":"D3:54:1A:6C:6C:FD",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":16,
+        "TX Power":-67,
+        "RSSI":-90
+    },
+    {
+        "Mac Adress":"F7:8D:5C:F2:AD:B0",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":19,
+        "TX Power":-67,
+        "RSSI":-91
+    },
+    {
+        "Mac Adress":"FD:0F:EE:88:49:45",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":51,
+        "TX Power":-67,
+        "RSSI":-92
+    },
+    {
+        "Mac Adress":"C0:CD:81:A0:C7:3C",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":34,
+        "TX Power":-67,
+        "RSSI":-85
+    },
+    {
+        "Mac Adress":"C1:BE:3B:66:D8:4C",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":45,
+        "TX Power":-67,
+        "RSSI":-91
+    },
+    {
+        "Mac Adress":"DF:26:23:6B:A0:44",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":11,
+        "TX Power":-67,
+        "RSSI":-88
+    },
+    {
+        "Mac Adress":"DF:F5:20:38:07:8D",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":30,
+        "TX Power":-67,
+        "RSSI":-88
+    },
+    {
+        "Mac Adress":"E5:26:EF:0D:8C:9F",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":15,
+        "TX Power":-67,
+        "RSSI":-86
+    },
+    {
+        "Mac Adress":"EC:EB:CF:21:92:9B",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":48,
+        "TX Power":-67,
+        "RSSI":-94
+    },
+    {
+        "Mac Adress":"FD:0F:EE:88:49:45",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":51,
+        "TX Power":-67,
+        "RSSI":-91
+    },
+    {
+        "Mac Adress":"C0:85:3B:B2:9C:C3",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":46,
+        "TX Power":-67,
+        "RSSI":-87
+    },
+    {
+        "Mac Adress":"EF:1F:32:0C:05:D0",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":9,
+        "TX Power":-67,
+        "RSSI":-83
+    },
+    {
+        "Mac Adress":"C9:4A:9F:30:54:0F",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":35,
+        "TX Power":-67,
+        "RSSI":-85
+    },
+    {
+        "Mac Adress":"CD:81:97:11:55:FA",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":41,
+        "TX Power":-67,
+        "RSSI":-89
+    },
+    {
+        "Mac Adress":"ED:FC:62:54:38:3E",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":54,
+        "TX Power":-67,
+        "RSSI":-95
+    },
+    {
+        "Mac Adress":"CB:8B:8D:D5:BA:F3",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":58,
+        "TX Power":-67,
+        "RSSI":-89
+    },
+    {
+        "Mac Adress":"C1:BE:3B:66:D8:4C",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":45,
+        "TX Power":-67,
+        "RSSI":-86
+    },
+    {
+        "Mac Adress":"E5:98:C1:F8:7C:52",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":42,
+        "TX Power":-67,
+        "RSSI":-92
+    },
+    {
+        "Mac Adress":"C1:BE:3B:66:D8:4C",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":45,
+        "TX Power":-67,
+        "RSSI":-91
+    },
+    {
+        "Mac Adress":"F6:79:09:D0:8C:80",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":17,
+        "TX Power":-67,
+        "RSSI":-87
+    },
+    {
+        "Mac Adress":"C3:3D:09:DE:0F:4F",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":12,
+        "TX Power":-67,
+        "RSSI":-87
+    },
+    {
+        "Mac Adress":"D7:9B:28:DD:C1:E5",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":4,
+        "TX Power":-67,
+        "RSSI":-90
+    },
+    {
+        "Mac Adress":"DA:43:E4:65:E4:9D",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":12,
+        "TX Power":-67,
+        "RSSI":-92
+    },
+    {
+        "Mac Adress":"C4:3D:E5:9A:40:21",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":1,
+        "TX Power":-67,
+        "RSSI":-91
+    },
+    {
+        "Mac Adress":"E5:26:EF:0D:8C:9F",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":15,
+        "TX Power":-67,
+        "RSSI":-97
+    },
+    {
+        "Mac Adress":"C3:3D:09:DE:0F:4F",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":12,
+        "TX Power":-67,
+        "RSSI":-86
+    },
+    {
+        "Mac Adress":"FC:83:E3:18:0A:9E",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":61,
+        "TX Power":-67,
+        "RSSI":-93
+    },
+    {
+        "Mac Adress":"F3:4A:80:C5:F1:A4",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":63,
+        "TX Power":-67,
+        "RSSI":-88
+    },
+    {
+        "Mac Adress":"E6:56:F5:E2:B6:61",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":33,
+        "TX Power":-67,
+        "RSSI":-86
+    },
+    {
+        "Mac Adress":"C0:85:3B:B2:9C:C3",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":46,
+        "TX Power":-67,
+        "RSSI":-88
+    },
+    {
+        "Mac Adress":"EA:D3:96:18:7B:22",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":38,
+        "TX Power":-67,
+        "RSSI":-86
+    },
+    {
+        "Mac Adress":"C0:CD:81:A0:C7:3C",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":34,
+        "TX Power":-67,
+        "RSSI":-90
+    },
+    {
+        "Mac Adress":"ED:49:B2:FA:52:C5",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":65,
+        "TX Power":-67,
+        "RSSI":-92
+    },
+    {
+        "Mac Adress":"C1:BE:3B:66:D8:4C",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":45,
+        "TX Power":-67,
+        "RSSI":-83
+    },
+    {
+        "Mac Adress":"F1:C2:42:0E:8A:01",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":36,
+        "TX Power":-67,
+        "RSSI":-80
+    },
+    {
+        "Mac Adress":"CD:81:97:11:55:FA",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":41,
+        "TX Power":-67,
+        "RSSI":-88
+    },
+    {
+        "Mac Adress":"CB:8B:8D:D5:BA:F3",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":58,
+        "TX Power":-67,
+        "RSSI":-89
+    },
+    {
+        "Mac Adress":"C6:DC:B1:99:E7:3A",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":8,
+        "TX Power":-67,
+        "RSSI":-86
+    },
+    {
+        "Mac Adress":"D1:34:0F:20:B4:00",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":31,
+        "TX Power":-67,
+        "RSSI":-87
+    },
+    {
+        "Mac Adress":"E0:1E:0E:EC:24:B8",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":60,
+        "TX Power":-67,
+        "RSSI":-90
+    },
+    {
+        "Mac Adress":"CE:0C:05:56:76:19",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":43,
+        "TX Power":-67,
+        "RSSI":-91
+    },
+    {
+        "Mac Adress":"FC:83:E3:18:0A:9E",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":61,
+        "TX Power":-67,
+        "RSSI":-91
+    },
+    {
+        "Mac Adress":"EA:72:C0:CE:3E:83",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":18,
+        "TX Power":-67,
+        "RSSI":-86
+    },
+    {
+        "Mac Adress":"C4:3D:E5:9A:40:21",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":1,
+        "TX Power":-67,
+        "RSSI":-92
+    },
+    {
+        "Mac Adress":"F6:79:09:D0:8C:80",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":17,
+        "TX Power":-67,
+        "RSSI":-86
+    },
+    {
+        "Mac Adress":"FF:F5:38:2B:CF:AA",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":53,
+        "TX Power":-67,
+        "RSSI":-92
+    },
+    {
+        "Mac Adress":"C4:3D:E5:9A:40:21",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":1,
+        "TX Power":-67,
+        "RSSI":-97
+    },
+    {
+        "Mac Adress":"EF:1F:32:0C:05:D0",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":9,
+        "TX Power":-67,
+        "RSSI":-87
+    },
+    {
+        "Mac Adress":"DD:B4:63:F2:BB:1F",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":62,
+        "TX Power":-67,
+        "RSSI":-87
+    },
+    {
+        "Mac Adress":"EC:15:3E:E2:53:B8",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":14,
+        "TX Power":-67,
+        "RSSI":-97
+    },
+    {
+        "Mac Adress":"D3:0F:D7:41:B1:5F",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":22,
+        "TX Power":-67,
+        "RSSI":-90
+    },
+    {
+        "Mac Adress":"C1:BE:3B:66:D8:4C",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":45,
+        "TX Power":-67,
+        "RSSI":-94
+    },
+    {
+        "Mac Adress":"EA:C7:59:7D:FF:11",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":37,
+        "TX Power":-67,
+        "RSSI":-97
+    },
+    {
+        "Mac Adress":"E9:50:19:B0:14:DC",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":28,
+        "TX Power":-67,
+        "RSSI":-80
+    },
+    {
+        "Mac Adress":"C2:4F:B0:B9:05:37",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":44,
+        "TX Power":-67,
+        "RSSI":-88
+    },
+    {
+        "Mac Adress":"F7:5F:FC:41:89:5B",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":26,
+        "TX Power":-67,
+        "RSSI":-93
+    },
+    {
+        "Mac Adress":"D9:7F:B9:C3:4E:FA",
+        "Local Name":"POI",
+        "UUID":"8578d285fd1f4f7b36f21b3297d6f0e3",
+        "Major":1,
+        "Minor":27,
+        "TX Power":-67,
+        "RSSI":-85
+    }
+]
