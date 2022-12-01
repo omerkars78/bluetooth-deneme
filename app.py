@@ -1,30 +1,47 @@
+from flask import Flask
+import asyncio
+from bleak import BleakScanner
 import asyncio
 from uuid import UUID
-import json 
+import json
 from construct import Array, Byte, Const, Int8sl, Int16ub, Struct
 from construct.core import ConstError
-
 from bleak import BleakScanner
 from bleak.backends.device import BLEDevice
 from bleak.backends.scanner import AdvertisementData
-
-
-ibeacon_format = Struct(
-    "type_length" / Const(b"\x02\x15"),
-    "uuid" / Array(16, Byte),
-    "major" / Int16ub,
-    "minor" / Int16ub,
-    "power" / Int8sl,
-)
+app = Flask(__name__)
 class UUIDEncoder(json.JSONEncoder):
     def default(self, uuid):
         if isinstance(uuid, UUID):
             # if the obj is uuid, we simply return the value of uuid
             return uuid.hex
         return json.JSONEncoder.default(self, uuid)
+    
+@app.route("/")
+def hello_world():
+    return "<p>Hello, World!</p>"
+
+
+# @app.route("/beacons")
+# async def main():
+
+#     devices = await BleakScanner.discover(return_adv=True)
+#     devices = list(devices)
+#     # for d, a in devices.values():
+#     return devices
+@app.route("/beacons")
+
 def device_found(
     device: BLEDevice, advertisement_data: AdvertisementData
 ):
+
+    ibeacon_format = Struct(
+        "type_length" / Const(b"\x02\x15"),
+        "uuid" / Array(16, Byte),
+        "major" / Int16ub,
+        "minor" / Int16ub,
+        "power" / Int8sl,
+    )
     """Decode iBeacon."""
     try:
         macadress = device.address
@@ -37,10 +54,8 @@ def device_found(
         power = ibeacon.power
         rssi = device.rssi
         rssi = int(rssi)
-        device_id = 0 
-        
-        device_list = [
-            {
+
+        beacons = { 
             "Mac Adress" : macadress,
             "Local Name" : name ,
             "UUID":uuid,
@@ -48,35 +63,15 @@ def device_found(
             "Minor":minor,
             "TX Power":power,
             "RSSI":rssi
-            }
-        ] 
+        } 
+        
+        if(beacons["Local Name"]== "POI" and beacons["RSSI"] <= -40 and beacons["RSSI"] >= -80):
+            return beacons
+            # with open("data.json","a") as file:
+            #     json.dump(beacons,file,sort_keys=True,indent=4,skipkeys=True,cls=UUIDEncoder,separators=(",",":"))
+        else:
+            pass 
 
-        list_device = {
-
-            "Mac Adress" : macadress,
-            "Local Name" : name ,
-            "UUID":uuid,
-            "Major":major,
-            "Minor":minor,
-            "TX Power":power,
-            "RSSI":rssi
-
-        }
-        # with open("data.json","w") as file:
-        #     json.dump(device_list,file,ensure_ascii=False,indent=4,skipkeys=True,cls=UUIDEncoder,separators=(",",":"))
-        
-        with open("data.json") as file:
-            devices = json.load(file)
-        
-        devices.append(list_device)   
-        with open("data.json","w") as file:
-            json.dump(devices,file,ensure_ascii=False,indent=4,skipkeys=True,cls=UUIDEncoder,separators=(",",":"))
-            
-        
-
-        
-       
-        
     except KeyError:
         # Apple company ID (0x004c) not found
         pass
@@ -85,19 +80,5 @@ def device_found(
         pass
 
 
-
-async def main():
-    """Scan for devices."""
-    scanner = BleakScanner()
-    scanner.register_detection_callback(device_found)
-    
-    
-
-    
-    while (True):
-        
-        await scanner.start()
-        await asyncio.sleep(0.5)
-        await scanner.stop()
-        
-asyncio.run(main())
+if __name__ == '__main__':
+    app.run(host="193.140.27.106", port=5000, debug=True)
