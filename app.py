@@ -16,7 +16,13 @@ class UUIDEncoder(json.JSONEncoder):
             # if the obj is uuid, we simply return the value of uuid
             return uuid.hex
         return json.JSONEncoder.default(self, uuid)
-    
+ibeacon_format = Struct(
+        "type_length" / Const(b"\x02\x15"),
+        "uuid" / Array(16, Byte),
+        "major" / Int16ub,
+        "minor" / Int16ub,
+        "power" / Int8sl,
+    )
 @app.route("/")
 def hello_world():
     return "<p>Hello, World!</p>"
@@ -31,21 +37,11 @@ def hello_world():
 #     return devices
 @app.route("/beacons")
 
-def device_found(
-    device: BLEDevice, advertisement_data: AdvertisementData
+async def device_found(device: BLEDevice, advertisement_data: AdvertisementData
 ):
-
-    ibeacon_format = Struct(
-        "type_length" / Const(b"\x02\x15"),
-        "uuid" / Array(16, Byte),
-        "major" / Int16ub,
-        "minor" / Int16ub,
-        "power" / Int8sl,
-    )
-    """Decode iBeacon."""
     try:
-        macadress = device.address
         name = advertisement_data.local_name
+        macadress = device.address
         apple_data = advertisement_data.manufacturer_data[0x004C]
         ibeacon = ibeacon_format.parse(apple_data)
         uuid = UUID(bytes=bytes(ibeacon.uuid))
@@ -78,6 +74,24 @@ def device_found(
     except ConstError:
         # No iBeacon (type 0x02 and length 0x15)
         pass
+        scanner = BleakScanner()
+        scanner.register_detection_callback(device_found)
+        async def main():
+            """Scan for devices."""
+            scanner = BleakScanner()
+            scanner.register_detection_callback(device_found)
+
+    
+    while (True):
+        await scanner.start()
+        await asyncio.sleep(0.5)
+        await scanner.stop()
+        
+        asyncio.run(main())
+    # while (True):
+    #     await scanner.start()
+    #     await asyncio.sleep(0.5)
+    #     await scanner.stop()
 
 
 if __name__ == '__main__':
