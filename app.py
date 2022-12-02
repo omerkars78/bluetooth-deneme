@@ -9,7 +9,7 @@ from construct.core import ConstError
 from bleak import BleakScanner
 from bleak.backends.device import BLEDevice
 from bleak.backends.scanner import AdvertisementData
-# from data.data2 import get_devices as get_devices2
+from data.data2 import get_devices as get_devices2
 app = Flask(__name__)
 # ibeacon_format = Struct(
 #     "type_length" / Const(b"\x02\x15"),
@@ -29,20 +29,16 @@ app = Flask(__name__)
 def hello_world():
     return "<p>Hello, World!</p>"
 
-@app.route("/beacons")
-def main():
-   
-
-    devices =  AdvertisementData.local_name
-    # devices = list(devices)
-    return devices
-    # print(devices.keys())
-
-
-
 # @app.route("/beacons")
-# def hello_world():
-#     return print(get_devices2)
+# async def get_devices():
+#     devices = await BleakScanner.discover(return_adv=True)
+
+#     return devices.keys()
+
+
+@app.route("/beacons")
+def hello_world():
+    return get_devices2()
 
 # @app.route("/beacons")
 # def device_found():
