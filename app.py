@@ -9,33 +9,44 @@ from construct.core import ConstError
 from bleak import BleakScanner
 from bleak.backends.device import BLEDevice
 from bleak.backends.scanner import AdvertisementData
-from data2 import main as main2
+# from data.data2 import get_devices as get_devices2
 app = Flask(__name__)
-ibeacon_format = Struct(
-    "type_length" / Const(b"\x02\x15"),
-    "uuid" / Array(16, Byte),
-    "major" / Int16ub,
-    "minor" / Int16ub,
-    "power" / Int8sl,
-)
-class UUIDEncoder(json.JSONEncoder):
-    def default(self, uuid):
-        if isinstance(uuid, UUID):
-            # if the obj is uuid, we simply return the value of uuid
-            return uuid.hex
-        return json.JSONEncoder.default(self, uuid)
+# ibeacon_format = Struct(
+#     "type_length" / Const(b"\x02\x15"),
+#     "uuid" / Array(16, Byte),
+#     "major" / Int16ub,
+#     "minor" / Int16ub,
+#     "power" / Int8sl,
+# )
+# class UUIDEncoder(json.JSONEncoder):
+#     def default(self, uuid):
+#         if isinstance(uuid, UUID):
+#             # if the obj is uuid, we simply return the value of uuid
+#             return uuid.hex
+#         return json.JSONEncoder.default(self, uuid)
 
 @app.route("/")
 def hello_world():
     return "<p>Hello, World!</p>"
+
 @app.route("/beacons")
-def hello_world():
-    return main2()
+def main():
+   
+
+    devices =  AdvertisementData.local_name
+    # devices = list(devices)
+    return devices
+    # print(devices.keys())
+
+
+
+# @app.route("/beacons")
+# def hello_world():
+#     return print(get_devices2)
 
 # @app.route("/beacons")
 # def device_found():
-#    return 
-#    async def devices(
+#     async def devices(
 #         device: BLEDevice, advertisement_data: AdvertisementData
 #     ):
 #         """Decode iBeacon."""

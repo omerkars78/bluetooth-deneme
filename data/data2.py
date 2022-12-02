@@ -85,5 +85,6 @@ async def main():
         await scanner.start()
         await asyncio.sleep(0.5)
         await scanner.stop()
-        
+
+get_devices = print(asyncio.run(main()))
 asyncio.run(main())
