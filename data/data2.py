@@ -48,20 +48,20 @@ def device_found(
             "RSSI":rssi
         } 
         
-        if(beacons["Local Name"]== "POI" and beacons["RSSI"] <= -40 and beacons["RSSI"] >= -80):
-            return print(beacons)
+        # if(beacons["Local Name"]== "POI" and beacons["RSSI"] <= -40 and beacons["RSSI"] >= -80):
+        #     return print(beacons)
             # with open("data.json","a") as file:
             #     json.dump(beacons,file,sort_keys=True,indent=4,skipkeys=True,cls=UUIDEncoder,separators=(",",":"))
-        else:
-            pass 
-        # print(f"Mac Adress : {macadress}")
-        # print(f"Local Name : {name}")
-        # print(f"UUID     : {uuid}")
-        # print(f"Major    : {major}")
-        # print(f"Minor    : {minor}")
-        # print(f"TX power : {power} dBm")
-        # print(f"RSSI     : {rssi} dBm")
-        # print(47 * "-") 
+        # else:
+        #     pass 
+        print(f"Mac Adress : {macadress}")
+        print(f"Local Name : {name}")
+        print(f"UUID     : {uuid}")
+        print(f"Major    : {major}")
+        print(f"Minor    : {minor}")
+        print(f"TX power : {power} dBm")
+        print(f"RSSI     : {rssi} dBm")
+        print(47 * "-") 
         
         # list_1 = [macadress,name,uuid,major,minor,power,rssi]
         # print(list_1)
