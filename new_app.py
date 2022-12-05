@@ -4,7 +4,6 @@ from flask import Flask, jsonify
 import json
 from construct import Array, Byte, Const, Int8sl, Int16ub, Struct
 from construct.core import ConstError
-
 from bleak import BleakScanner
 from bleak.backends.device import BLEDevice
 from bleak.backends.scanner import AdvertisementData
@@ -33,7 +32,7 @@ def index():
     beacons = []
     # Scan for devices
     scanner = BleakScanner()
-    devices = asyncio.run(scanner.scan(timeout=5))
+    devices = asyncio.run(scanner.discover(timeout=5))
     for device in devices:
         try:
             macadress = device.address
