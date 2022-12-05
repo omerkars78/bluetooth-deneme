@@ -34,4 +34,4 @@ def devices():
      
 
 if __name__ == "__main__":
-    app.run(host="193.140.27.106", port=5000, debug=True)
+    app.run()
