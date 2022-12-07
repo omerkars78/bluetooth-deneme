@@ -109,49 +109,49 @@
 // const button = document.getElementById('mybutton');
 // button.addEventListener('click', handleClick);
 
-async function onButtonClick() {
-  let filters = [];
+// async function onButtonClick() {
+//   let filters = [];
 
-  let filterService = document.querySelector('#service').value;
-  if (filterService.startsWith('0x')) {
-    filterService = parseInt(filterService);
-  }
-  if (filterService) {
-    filters.push({services: [filterService]});
-  }
+//   let filterService = document.querySelector('#service').value;
+//   if (filterService.startsWith('0x')) {
+//     filterService = parseInt(filterService);
+//   }
+//   if (filterService) {
+//     filters.push({services: [filterService]});
+//   }
 
-  let filterName = document.querySelector('#name').value;
-  if (filterName) {
-    filters.push({name: filterName});
-  }
+//   let filterName = document.querySelector('#name').value;
+//   if (filterName) {
+//     filters.push({name: filterName});
+//   }
 
-  let filterNamePrefix = document.querySelector('#namePrefix').value;
-  if (filterNamePrefix) {
-    filters.push({namePrefix: filterNamePrefix});
-  }
+//   let filterNamePrefix = document.querySelector('#namePrefix').value;
+//   if (filterNamePrefix) {
+//     filters.push({namePrefix: filterNamePrefix});
+//   }
 
-  let options = {};
-  if (document.querySelector('#allDevices').checked) {
-    options.acceptAllDevices = true;
-  } else {
-    options.filters = filters;
-  }
+//   let options = {};
+//   if (document.querySelector('#allDevices').checked) {
+//     options.acceptAllDevices = true;
+//   } else {
+//     options.filters = filters;
+//   }
 
-  try {
-    log('Requesting Bluetooth Device...');
-    log('with ' + JSON.stringify(options));
-    const device = await navigator.bluetooth.requestDevice(options);
+//   try {
+//     log('Requesting Bluetooth Device...');
+//     log('with ' + JSON.stringify(options));
+//     const device = await navigator.bluetooth.requestDevice(options);
 
-    log('> Name:             ' + device.name);
-    log('> Id:               ' + device.id);
-    log('> Connected:        ' + device.gatt.connected);
-  } catch(error)  {
-    log('Argh! ' + error);
-  }
-}
+//     log('> Name:             ' + device.name);
+//     log('> Id:               ' + device.id);
+//     log('> Connected:        ' + device.gatt.connected);
+//   } catch(error)  {
+//     log('Argh! ' + error);
+//   }
+// }
 
-const button = document.getElementById('mybutton');
-button.addEventListener('click', onButtonClick)
+// const button = document.getElementById('mybutton');
+// button.addEventListener('click', onButtonClick)
 
 
 // Çevredeki Bluetooth Cihazlarını Listeleme 
@@ -214,3 +214,41 @@ button.addEventListener('click', onButtonClick)
 // window.onload = () => {
 //   populateBluetoothDevices();
 // };
+
+// Bu kodun çalışabilmesi için navigator.bluetooth dökümanına erişimin olması gerekir.
+
+// İlk olarak, iBeacon verisi ile eşleşen bir Bluetooth beacon'u arayın.
+function handleClick(){
+  navigator.bluetooth.requestDevice({
+    filters: [{
+      services: ['ibeacon']
+    }]
+  })
+  .then(device => {
+    // İstenen beacon bulunduğunda, onu bağlayın ve ona ait verileri alın.
+    return device.gatt.connect();
+  })
+  .then(server => {
+    // Beacon'un verilerini içeren bir service'i bulun ve onu bağlayın.
+    return server.getPrimaryService('ibeacon');
+  })
+  .then(service => {
+    // Service'in içinde bulunan verileri içeren bir Characteristic'i bulun ve onu okuyun.
+    return service.getCharacteristic('ibeacon_data');
+  })
+  .then(characteristic => {
+    // Characteristic'in verilerini okuyun ve onları bir değişkende saklayın.
+    return characteristic.readValue();
+  })
+  .then(value => {
+    // Okunan verileri bir değişkende saklayın.
+    const beaconData = value.buffer;
+    console.log("Beacon data: " + beaconData);
+  
+    // İşlem tamamlandığında, beaconData değişkeni iBeacon verisi içerecektir.
+    // Burada, veriyi istediğiniz gibi kullanabilirsiniz.
+  });
+}
+
+const button = document.getElementById('mybutton');
+button.addEventListener('click', handleClick)
