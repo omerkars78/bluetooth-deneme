@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pyodide Example</title>
+</head>
+<body>
+    <h1>Pyodide Example</h1>
+    <p>Sum of numbers: <span id="result"></span></p>
+
+    <!-- Load Pyodide -->
+    <script src="https://pyodide-cdn2.iodide.io/pyodide.js"></script>
+
+    <script>
+        // Wait for Pyodide to be fully loaded
+        window.languagePluginUrl = 'https://pyodide-cdn2.iodide.io/v0.16.0/full/';
+        pyodide.loadPackage(['numpy']).then(() => {
+            // Define a Python function to sum the numbers in a list
+            let sumNumbers = function(numbers) {
+                let sum = 0;
+                for (let i = 0; i < numbers.length; i++) {
+                    sum += numbers[i];
+                }
+                return sum;
+            }
+
+            // Call the Python function and display the result on the web page
+            let numbers = [1, 2, 3, 4, 5];
+            let result = sumNumbers(numbers);
+            document.getElementById('result').innerHTML = result;
+        });
+    </script>
+</body>
+</html>

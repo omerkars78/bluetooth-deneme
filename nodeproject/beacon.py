@@ -1,40 +1,27 @@
-<!DOCTYPE html>
-<html>
-  <head>
-      <script src="https://cdn.jsdelivr.net/pyodide/v0.21.3/full/pyodide.js"></script>
-  </head>
-  <body>
-    Pyodide test page <br>
-    Open your browser console to see Pyodide output
-    <script type="text/javascript">
-      async function main(){
-        let pyodide = await loadPyodide();
-        console.log(pyodide.runPython(`
 import asyncio
 from uuid import UUID
 import json 
-
 from construct import Array, Byte, Const, Int8sl, Int16ub, Struct
 from construct.core import ConstError
+
 from bleak import BleakScanner
 from bleak.backends.device import BLEDevice
 from bleak.backends.scanner import AdvertisementData
 
-ibeacon_format = Struct(
-  "type_length" / Const(b"\x02\x15"),
-        "uuid" / Array(16, Byte),
-        "major" / Int16ub,
-        "minor" / Int16ub,
-        "power" / Int8sl,
-    )
-class UUIDEncoder(json.JSONEncoder):
 
-    def default(self, uuid):
+ibeacon_format = Struct(
+    "type_length" / Const(b"\x02\x15"),
+    "uuid" / Array(16, Byte),
+    "major" / Int16ub,
+    "minor" / Int16ub,
+    "power" / Int8sl,
+)
+class UUIDEncoder(json.JSONEncoder):
+        def default(self, uuid):
             if isinstance(uuid, UUID):
                 # if the obj is uuid, we simply return the value of uuid
                 return uuid.hex
             return json.JSONEncoder.default(self, uuid)
-
 def device_found(
     device: BLEDevice, advertisement_data: AdvertisementData
 ):
@@ -50,6 +37,16 @@ def device_found(
         power = ibeacon.power
         rssi = device.rssi
         rssi = int(rssi)
+
+        # beacons = { 
+        #     "Mac Adress" : macadress,
+        #     "Local Name" : name ,
+        #     "UUID":uuid,
+        #     "Major":major,
+        #     "Minor":minor,
+        #     "TX Power":power,
+        #     "RSSI":rssi
+        # } 
 
         print(f"Mac Adress : {macadress}")
         print(f"Local Name : {name}")
@@ -77,10 +74,3 @@ async def main():
         await scanner.stop()
         
 asyncio.run(main())
-        `));
-        
-      }
-      main();
-    </script>
-  </body>
-</html>
